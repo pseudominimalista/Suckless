@@ -1,0 +1,6 @@
+export PATH="$HOME/.local/bin:$PATH" &
+bgs ~/.wp &
+xrdb -merge .xresources &
+setxkbmap br &
+slstatus &
+dwm
