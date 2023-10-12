@@ -3,6 +3,9 @@ Este repositório está o meu setup com ferramentas suckless, junto de alguns sc
 
 ### Programas utilizados no setup (fora os do próprio repositório):  
 - Librewolf
+- sx
+- xrdb
+- setxkbmap
 - ffmpeg
 - cmus
 - alsa-utils
