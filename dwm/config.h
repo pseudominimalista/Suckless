@@ -66,6 +66,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 static const char *dfm[] = { "dfm", NULL };
 static const char *todo[] = { "todo", NULL };
+static const char *wifi[] = { "wifi", NULL };
 static const char *web[] = { "librewolf", NULL };
 static const char *scr[] = { "scr", NULL };
 static const char *alsa[] = { "st", "alsamixer", NULL };
@@ -85,6 +86,7 @@ static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_e,       spawn,          {.v = dfm } },
 	{ MODKEY,                       XK_d,       spawn,          {.v = todo } },
+	{ MODKEY,                       XK_y,       spawn,          {.v = wifi } },
 	{ MODKEY,                       XK_w,       spawn,          {.v = web } },
 	{ MODKEY,                       XK_a,       spawn,          {.v = alsa } },
 	{ MODKEY,                       XK_c,       spawn,          {.v = cmus } },
@@ -116,7 +118,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY|Mod1Mask,              XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
-	{ MODKEY,             		XK_q,      killclient,     {0} }, // Fechar janelas //
+	{ MODKEY,             			XK_q,      killclient,     {0} }, // Fechar janelas //
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} }, // Tilling //
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} }, // Floating //
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} }, // Monocle //
