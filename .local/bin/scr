@@ -1,0 +1,4 @@
+#!/bin/sh
+xscreenshot > scr.ff;
+ff2jpg < scr.ff > $(date)\.jpg;
+rm scr.ff

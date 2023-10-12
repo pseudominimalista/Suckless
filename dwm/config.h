@@ -59,6 +59,7 @@ static const Layout layouts[] = {
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
+
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, NULL };
@@ -66,8 +67,6 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *dfm[] = { "dfm", NULL };
 static const char *todo[] = { "todo", NULL };
 static const char *web[] = { "librewolf", NULL };
-static const char *wp[] = { "wp", NULL };
-static const char *pass[] = { "passmenu", NULL };
 static const char *scr[] = { "scr", NULL };
 static const char *alsa[] = { "st", "alsamixer", NULL };
 static const char *cmus[] = { "st", "cmus", NULL };
@@ -81,21 +80,15 @@ static const char *cmu[] = { "cmus-remote", "-u", NULL };
 static const char *cms[] = { "cmus-remote", "-s", NULL };
 static const char *cmr[] = { "cmus-remote", "-r", NULL };
 static const char *cmn[] = { "cmus-remote", "-n", NULL };
-static const char *emj[] = { "emj", NULL };
-static const char *up[] = { "up", NULL};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_e,       spawn,          {.v = dfm } },
 	{ MODKEY,                       XK_d,       spawn,          {.v = todo } },
 	{ MODKEY,                       XK_w,       spawn,          {.v = web } },
-	{ MODKEY,                       XK_i,       spawn,          {.v = wp } },
-	{ MODKEY,                       XK_s,       spawn,          {.v = pass } },
 	{ MODKEY,                       XK_a,       spawn,          {.v = alsa } },
 	{ MODKEY,                       XK_c,       spawn,          {.v = cmus } },
 	{ MODKEY,                       XK_Delete,  spawn,          {.v = pfm } },
-	{ MODKEY,                       XK_u,       spawn,          {.v = up } },
-	{ MODKEY,                       XK_semicolon,   spawn,      {.v = emj } },
 	{ MODKEY,                       XK_F1, 	    spawn,          {.v = mutevol } },
 	{ MODKEY,           	        XK_F2,      spawn,          {.v = decvol } },
 	{ MODKEY,           	        XK_F3,      spawn,          {.v = incvol } },
