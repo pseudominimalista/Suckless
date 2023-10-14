@@ -1,6 +1,6 @@
 export PATH="$HOME/.local/bin:$PATH" &
 bgs ~/.wp &
-xrdb -merge .xresources &
+xrdb -merge ~/.config/sx/xresources &
 setxkbmap br &
 slstatus &
 dwm
