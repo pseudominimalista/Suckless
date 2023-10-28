@@ -4,4 +4,6 @@ bind '"\e[B":history-search-forward'
 alias grep='grep -i --color'
 alias ls='ls --color=auto'
 alias ll='ls -lav --ignore=..'   # show long listing of all except ".."
-alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles except "."
+alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles except
+"."
+alias extrair='find . -name "*.zip" -exec 7z x "{}" -o\* \;'
